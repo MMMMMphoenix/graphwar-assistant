@@ -1,0 +1,13 @@
+# Third-party reference sources. Keep them local; do not publish them with this project.
+# The notes README.txt and MANIFEST.txt may be committed.
+GraphBot/
+GraphingSolver/
+Graphwar-Bot/
+GraphwarBot/
+cheatclient/
+copacaaa-graphwar-bot/
+graphwar-aim-assist/
+graphwar-aim/
+graphwar-generator/
+master-ferrari/
+zielmicha-graphwar-bot/

@@ -1,0 +1,9 @@
+# Perception layer dependencies.
+# numpy is pinned below 2 because the local scientific stack (scipy, older
+# OpenCV builds) is not fully compatible with numpy 2.x on this machine.
+numpy>=1.26,<2
+opencv-python>=4.8,<5
+scipy>=1.11
+Pillow>=10
+pywin32>=306; sys_platform == "win32"
+pytest>=7

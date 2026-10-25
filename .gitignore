@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Browser profiles and other scratch state from debugging
+.edge-headless/
+
+# Local captures and debug output. Screenshots can contain player names.
+botmain/debug/
+botmain/debug_*.png
+botmain/*.log
+
+# Recorded sessions, calibration images, and benchmarks stay local for the same reason.
+botmain/data/screenshots/*
+botmain/data/perception_benchmark/*
+botmain/data/calibration/*
+botmain/data/sessions/*
+botmain/data/replays/*
+botmain/data/solver_logs/*
+!botmain/data/*/.gitkeep
+
+# The Java game body is local-only and not redistributed.
+game/graphwar.jar
+game/*.conf
+game/*.log
+game/*.png
+
+# The Rust port is a third-party reference, not the game body.
+graphwar/
+
+# Third-party reference sources are for reading only; keep the notes.
+references/oss/*/
+!references/oss/README.txt
+!references/oss/MANIFEST.txt

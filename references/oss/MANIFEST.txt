@@ -1,0 +1,100 @@
+GRAPH WAR 开源 BOT 参考源码清单
+
+调研日期：2026-10-25
+说明：目录中保留原始源码和许可证文件，删除了 .git 元数据。提交哈希对应复制时的上游版本。更新时重新克隆并核对差异。
+
+目录：GraphBot
+远程：https://github.com/KroSheChKa/GraphBot
+提交：1d44b68ab34cf959643d770ff93c8794f600198a
+许可证：MIT
+语言：JavaScript，Python
+代表文件：core/symbolic_ga_planner.py，core/polynomial_planner.py，core/pathfinding.py，core/avoidance.py，core/detection.py，docs/MATH.md
+方案：多表示弹道实验室，A 星、多项式岭回归、控制点 GA、符号表达式 GA 并用。
+
+目录：GraphingSolver
+远程：https://github.com/ADEHJKNTV/GraphingSolver
+提交：105fd48e9411707df997716c6e40fec8c4bd8946
+许可证：MIT
+语言：Python
+代表文件：solver.py
+方案：人工点选折线，用 sign 窗口或 S 形窗口拼接分段直线。
+
+目录：Graphwar-Bot
+远程：https://github.com/nico-fb/Graphwar-Bot
+提交：efd3037ac107de720150090766e72d47540939b6
+许可证：无许可证，默认保留所有权利
+语言：Java
+代表文件：Graph.java
+方案：人工点击航点，用 S 形门拼接正弦和台阶，不做搜索。
+
+目录：GraphwarBot
+远程：https://github.com/Scaleneee/GraphwarBot
+提交：04e3c3d9d7d862377e959af7e509e0c35817080b
+许可证：无许可证，默认保留所有权利
+语言：Python
+代表文件：solver.py，models.py
+方案：未完成项目，只计算两点连线斜率，主程序为空。
+
+目录：cheatclient
+远程：https://github.com/LzdqesjG/graphwar-cheatclient
+提交：22fbf6a212e8aa9739758da180f02975b330380d
+许可证：GPLv3
+语言：Java
+代表文件：functions.conf，README.md
+方案：客户端修改，弹道预测、坐标显示、函数预设、输入隐藏。不是 AI。
+
+目录：copacaaa-graphwar-bot
+远程：https://github.com/COPacaaa/graphwar-bot
+提交：ed647c8b6a2f82f487296ecd8bc3c6d452aec24a
+许可证：无许可证，默认保留所有权利
+语言：Python
+代表文件：graphwar_bot.py，browser_bot.py，gui.py
+方案：直线和二次曲线计算，带图形界面和浏览器自动化雏形。
+
+目录：graphwar-aim
+远程：https://github.com/RE22GDV/graphwar-aim
+提交：e61013492f3c51f9cb46eaea02c12eb3d8f6171f
+许可证：MIT
+语言：Python
+代表文件：graphwar_aim/solver.py，graphwar_aim/formula.py，graphwar_aim/legit.py，graphwar_aim/vision.py，graphwar_aim/simulate.py
+方案：屏幕读取，网格 DAG 动态规划，精确相交，RDP 简化，重新锚定，绝对值函数输出。
+
+目录：graphwar-aim-assist
+远程：https://github.com/TonglaSudLor/graphwar-aim-assist
+提交：a59e084019b2ee53708e10d6e4ebde55a154407c
+许可证：GPLv3
+语言：Java
+代表文件：source/src/Graphwar/AimAssist.java，source/src/Graphwar/ComputerPlayer.java，source/src/Graphwar/Function.java，source/src/Graphwar/GameData.java，source/src/Graphwar/Obstacle.java
+方案：进程内精确状态，逐段竖直列动态规划，ReLU 斜坡输出，多目标贪心串联，内置 GA 兜底。
+
+目录：graphwar-generator
+远程：https://github.com/edleebinj/graphwar-generator
+提交：41c31257c995b4501ad5729064239c2891e57b17
+许可证：MIT
+语言：Python
+代表文件：graphwar_fourier/main.py，graphwar_fourier/lagrange.py
+方案：人工点选，50 点采样，离散余弦变换，50 个余弦项输出。
+
+目录：master-ferrari
+远程：https://github.com/Master-Ferrari/graphwar-master-ferrari
+提交：764b7964d18e92d3e47c1c84a0e87d08a30a1247
+许可证：无许可证，默认保留所有权利
+语言：AutoHotkey
+代表文件：master-ferrari.ahk，vision.ahk
+方案：覆盖层加人工折线，ReLU 斜坡拼接，剪贴板粘贴和自动回车。图像搜索只找自己的位置。
+
+目录：zielmicha-graphwar-bot
+远程：https://github.com/zielmicha/graphwar-bot
+提交：8e0bd553e25f4ee2cf99152c0373b7d16a915b1a
+许可证：无许可证，默认保留所有权利
+语言：Python
+代表文件：graphbot.py，graphloc.py，func-join.fkt
+方案：人工点选，用 abs(x) 的 0.00001 次方做左右切换，递归拼接折线。
+
+官方内置 ComputerPlayer
+
+Rust 版本：项目内 graphwar/crates/server/src/bot.rs
+Java 版本：references/oss/graphwar-aim-assist/source/src/Graphwar/ComputerPlayer.java
+配套阅读：references/oss/graphwar-aim-assist/source/src/Graphwar/Function.java
+上游：https://github.com/catabriga/graphwar
+说明：Java 版本位于 GPLv3 仓库中，只用于阅读行为，不复制进核心代码。

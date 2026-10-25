@@ -1,0 +1,14 @@
+This directory contains adapted code from graphwar-aim:
+https://github.com/RE22GDV/graphwar-aim
+
+Copyright (c) 2026 RE22GDV
+MIT License. See LICENSE in this directory and THIRD_PARTY_NOTICES.txt at the
+project root.
+
+Modifications: config.py was trimmed to perception-only settings; package
+paths were adjusted. No solver, GUI, or application code is included.
+
+capture.py: find_hwnd() now prefers an exact window-title match over the first
+substring match. The original version returned the first visible window whose
+title contained "Graphwar", which could select an editor or chat window instead
+of the game. On Windows the Java client is titled exactly "Graphwar".

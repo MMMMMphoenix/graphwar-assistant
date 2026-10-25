@@ -1,0 +1,76 @@
+THIRD PARTY NOTICES
+
+This project contains adapted source code from the following MIT-licensed
+projects. The original copyright notices and license texts are reproduced
+below. See also references/oss/README.txt for the full reference survey.
+
+1. graphwar-aim
+
+Source: https://github.com/RE22GDV/graphwar-aim
+Used in: botmain/src/gwbot/perception/vendor/graphwar_aim/
+Files: capture.py, vision.py, geometry.py, config.py (trimmed)
+Modifications: config.py keeps only world bounds and vision parameters;
+package paths adjusted; no solver or GUI code is included. capture.py
+find_hwnd() prefers an exact window-title match, so the game window is chosen
+over another window whose title merely contains "Graphwar".
+
+MIT License
+
+Copyright (c) 2026 RE22GDV
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+2. GraphBot
+
+Source: https://github.com/KroSheChKa/GraphBot
+Used in: botmain/src/gwbot/perception/window_capture.py
+Files: logic adapted from core/game_capture.py and core/window_capture.py
+Modifications: reduced to the off-screen PrintWindow client capture; window
+lookup prefers an exact title match and rejects zero-sized client areas, so a
+terminal or editor window that contains "Graphwar" in its title is not picked;
+no browser UI, planner, or config files are included.
+
+3. Java game client (not bundled)
+
+game/graphwar.jar is the upstream Graphwar Java client, copied unchanged from
+a third-party repository that ships it without a license file. It is GPL
+upstream. It is kept locally only, is listed in .gitignore, and is not
+distributed with this project. No code from it is copied into the source tree.
+
+MIT License
+
+Copyright (c) 2024 KroSheChKa
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
